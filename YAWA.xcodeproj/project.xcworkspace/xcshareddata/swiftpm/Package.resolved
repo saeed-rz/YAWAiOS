@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "yawashared",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/saeed-rz/YAWAShared.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "526089ab2ee784c8feaf1e4beeb0b01b62f96cb1"
+      }
+    }
+  ],
+  "version" : 2
+}
