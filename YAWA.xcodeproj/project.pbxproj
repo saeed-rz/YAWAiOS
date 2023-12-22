@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C20C55552B361CD70041EDD4 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = C20C55542B361CD70041EDD4 /* ComposableArchitecture */; };
 		C240AD672B262AA40038502E /* YAWAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C240AD662B262AA40038502E /* YAWAApp.swift */; };
 		C240AD692B262AA40038502E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C240AD682B262AA40038502E /* ContentView.swift */; };
 		C240AD6B2B262AA50038502E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C240AD6A2B262AA50038502E /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C20C55552B361CD70041EDD4 /* ComposableArchitecture in Frameworks */,
 				C29F053A2B28BE5F00B01CD4 /* YAWAShared in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,6 +121,7 @@
 			name = YAWA;
 			packageProductDependencies = (
 				C29F05392B28BE5F00B01CD4 /* YAWAShared */,
+				C20C55542B361CD70041EDD4 /* ComposableArchitecture */,
 			);
 			productName = YAWA;
 			productReference = C240AD632B262AA40038502E /* YAWA.app */;
@@ -172,6 +175,7 @@
 			mainGroup = C240AD5A2B262AA40038502E;
 			packageReferences = (
 				C29F05382B28BE5F00B01CD4 /* XCRemoteSwiftPackageReference "YAWAShared" */,
+				C20C55532B361CD70041EDD4 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = C240AD642B262AA40038502E /* Products */;
 			projectDirPath = "";
@@ -474,6 +478,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C20C55532B361CD70041EDD4 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = exactVersion;
+				version = 1.5.6;
+			};
+		};
 		C29F05382B28BE5F00B01CD4 /* XCRemoteSwiftPackageReference "YAWAShared" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/saeed-rz/YAWAShared.git";
@@ -485,6 +497,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C20C55542B361CD70041EDD4 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C20C55532B361CD70041EDD4 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
 		C29F05392B28BE5F00B01CD4 /* YAWAShared */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C29F05382B28BE5F00B01CD4 /* XCRemoteSwiftPackageReference "YAWAShared" */;
