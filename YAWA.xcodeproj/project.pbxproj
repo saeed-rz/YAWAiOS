@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		C20C55552B361CD70041EDD4 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = C20C55542B361CD70041EDD4 /* ComposableArchitecture */; };
+		C20C55592B38AF610041EDD4 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C55582B38AF610041EDD4 /* TodayView.swift */; };
+		C20C555C2B38C2090041EDD4 /* ExtraInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C555B2B38C2090041EDD4 /* ExtraInfoView.swift */; };
+		C20C555E2B38C2410041EDD4 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C555D2B38C2410041EDD4 /* InfoView.swift */; };
+		C20C55612B38CCBC0041EDD4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C55602B38CCBC0041EDD4 /* HomeView.swift */; };
+		C20C55642B38DA730041EDD4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C20C55632B38DA730041EDD4 /* Kingfisher */; };
 		C240AD672B262AA40038502E /* YAWAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C240AD662B262AA40038502E /* YAWAApp.swift */; };
 		C240AD692B262AA40038502E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C240AD682B262AA40038502E /* ContentView.swift */; };
 		C240AD6B2B262AA50038502E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C240AD6A2B262AA50038502E /* Assets.xcassets */; };
@@ -27,6 +32,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C20C55582B38AF610041EDD4 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		C20C555B2B38C2090041EDD4 /* ExtraInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraInfoView.swift; sourceTree = "<group>"; };
+		C20C555D2B38C2410041EDD4 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		C20C55602B38CCBC0041EDD4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C240AD632B262AA40038502E /* YAWA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YAWA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C240AD662B262AA40038502E /* YAWAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YAWAApp.swift; sourceTree = "<group>"; };
 		C240AD682B262AA40038502E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C20C55642B38DA730041EDD4 /* Kingfisher in Frameworks */,
 				C20C55552B361CD70041EDD4 /* ComposableArchitecture in Frameworks */,
 				C29F053A2B28BE5F00B01CD4 /* YAWAShared in Frameworks */,
 			);
@@ -57,6 +67,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C20C55562B38AF3F0041EDD4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C20C555A2B38C1F60041EDD4 /* ExtraInfo */,
+				C20C55572B38AF4A0041EDD4 /* Today */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C20C55572B38AF4A0041EDD4 /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				C20C55582B38AF610041EDD4 /* TodayView.swift */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		C20C555A2B38C1F60041EDD4 /* ExtraInfo */ = {
+			isa = PBXGroup;
+			children = (
+				C20C555B2B38C2090041EDD4 /* ExtraInfoView.swift */,
+				C20C555D2B38C2410041EDD4 /* InfoView.swift */,
+			);
+			path = ExtraInfo;
+			sourceTree = "<group>";
+		};
+		C20C555F2B38CCA10041EDD4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C20C55562B38AF3F0041EDD4 /* Components */,
+				C20C55602B38CCBC0041EDD4 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		C240AD5A2B262AA40038502E = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +123,7 @@
 		C240AD652B262AA40038502E /* YAWA */ = {
 			isa = PBXGroup;
 			children = (
+				C20C555F2B38CCA10041EDD4 /* Home */,
 				C240AD662B262AA40038502E /* YAWAApp.swift */,
 				C240AD682B262AA40038502E /* ContentView.swift */,
 				C240AD6A2B262AA50038502E /* Assets.xcassets */,
@@ -122,6 +168,7 @@
 			packageProductDependencies = (
 				C29F05392B28BE5F00B01CD4 /* YAWAShared */,
 				C20C55542B361CD70041EDD4 /* ComposableArchitecture */,
+				C20C55632B38DA730041EDD4 /* Kingfisher */,
 			);
 			productName = YAWA;
 			productReference = C240AD632B262AA40038502E /* YAWA.app */;
@@ -176,6 +223,7 @@
 			packageReferences = (
 				C29F05382B28BE5F00B01CD4 /* XCRemoteSwiftPackageReference "YAWAShared" */,
 				C20C55532B361CD70041EDD4 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				C20C55622B38DA730041EDD4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = C240AD642B262AA40038502E /* Products */;
 			projectDirPath = "";
@@ -212,6 +260,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C240AD692B262AA40038502E /* ContentView.swift in Sources */,
+				C20C555C2B38C2090041EDD4 /* ExtraInfoView.swift in Sources */,
+				C20C55592B38AF610041EDD4 /* TodayView.swift in Sources */,
+				C20C55612B38CCBC0041EDD4 /* HomeView.swift in Sources */,
+				C20C555E2B38C2410041EDD4 /* InfoView.swift in Sources */,
 				C240AD672B262AA40038502E /* YAWAApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,6 +538,14 @@
 				version = 1.5.6;
 			};
 		};
+		C20C55622B38DA730041EDD4 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.1;
+			};
+		};
 		C29F05382B28BE5F00B01CD4 /* XCRemoteSwiftPackageReference "YAWAShared" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/saeed-rz/YAWAShared.git";
@@ -501,6 +561,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C20C55532B361CD70041EDD4 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		C20C55632B38DA730041EDD4 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C20C55622B38DA730041EDD4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 		C29F05392B28BE5F00B01CD4 /* YAWAShared */ = {
 			isa = XCSwiftPackageProductDependency;
