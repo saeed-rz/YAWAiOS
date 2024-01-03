@@ -6,12 +6,19 @@
 //
 
 import SwiftUI
+import YAWAShared
 
 @main
 struct YAWAApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppView(
+                store: .init(initialState: .init()) {
+                    AppReducer()
+                } withDependencies: {
+                    $0.weatherAPI = .live(service: OpenWeatherAPI())
+                }
+            )
         }
     }
 }

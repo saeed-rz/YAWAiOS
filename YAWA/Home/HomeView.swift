@@ -5,13 +5,15 @@
 //  Created by Saeid Rezaeisadrabadi on 24/12/2023.
 //
 
+import ComposableArchitecture
 import SwiftUI
 
 struct HomeView: View {
-    @State var searchTerm: String = ""
+
+    let store: StoreOf<HomeReducer>
 
     var body: some View {
-        NavigationStack {
+        WithViewStore(store, observe: { $0 }) { viewStore in
             VStack {
                 TodayView(city: "Munich", temp: "25°C", date: "25/12/2023")
                 ExtraInfoView()
@@ -28,12 +30,22 @@ struct HomeView: View {
                 )
             }
             .ignoresSafeArea()
-            // TODO: Implement search API
-//            .searchable(text: $searchTerm, placement: .navigationBarDrawer(displayMode: .always))
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    NavigationLink(
+                        state: PathReducer.State.searchCity(.init())
+                    ) {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundStyle(.white)
+                    }
+                }
+            }
         }
     }
 }
 
 #Preview {
-    HomeView()
+    HomeView(store: .init(initialState: .init()) {
+        HomeReducer()
+    })
 }
