@@ -12,11 +12,11 @@ struct WeatherAPI {
 
     var currentWeather: @Sendable (Double, Double) async throws -> WeatherData
 
-    var searchCity: @Sendable (String) async throws -> [GeoData]
+    var searchCity: @Sendable (String) async throws -> [City]
 
     init(
         currentWeather: @escaping @Sendable (Double, Double) async throws -> WeatherData,
-        searchCity: @escaping @Sendable (String) async throws -> [GeoData]
+        searchCity: @escaping @Sendable (String) async throws -> [City]
     ) {
         self.currentWeather = currentWeather
         self.searchCity = searchCity
