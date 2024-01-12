@@ -40,6 +40,9 @@ struct HomeView: View {
                     }
                 }
             }
+            .task {
+                viewStore.send(.task)
+            }
         }
     }
 }

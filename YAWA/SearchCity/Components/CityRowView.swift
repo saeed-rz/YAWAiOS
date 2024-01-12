@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CityRowView: View {
 
-    let city: GeoData
+    let city: City
 
     var body: some View {
         GeometryReader { geometry in

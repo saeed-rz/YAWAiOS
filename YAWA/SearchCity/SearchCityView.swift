@@ -9,6 +9,7 @@ import ComposableArchitecture
 import SwiftUI
 
 struct SearchCityView: View {
+    @Environment(\.dismiss) var dismiss
 
     let store: StoreOf<SearchCityReducer>
     var body: some View {
@@ -18,6 +19,10 @@ struct SearchCityView: View {
                     ForEach(viewStore.results, id: \.id) { city in
                         CityRowView(city: city)
                             .padding(.vertical, 16)
+                            .onTapGesture {
+                                viewStore.send(.cityTapped(city))
+                                dismiss()
+                            }
                     }
                 } header: {
                     CityHeaderView()

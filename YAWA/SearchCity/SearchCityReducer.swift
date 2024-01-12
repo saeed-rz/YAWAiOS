@@ -13,16 +13,18 @@ struct SearchCityReducer {
     
     struct State: Equatable {
         @BindingState var searchTerm = ""
-        var results: [GeoData] = []
+        var results: [City] = []
     }
 
     enum Action: BindableAction {
         case binding(BindingAction<State>)
         case search(String)
-        case searchResult([GeoData])
+        case searchResult([City])
+        case cityTapped(City)
     }
 
     @Dependency(\.weatherAPI) var weatherAPI
+    @Dependency(\.userDefaultsManager.userDefaults) var userDefaults
 
     var body: some ReducerOf<Self> {
         BindingReducer()
@@ -43,19 +45,15 @@ struct SearchCityReducer {
                     state.results = data
                     return .none
 
+                case let .cityTapped(city):
+                    if let cityData = try? PropertyListEncoder().encode(city) {
+                        userDefaults.set(cityData, forKey: UserDefaultsKey.selectedCityKey)
+                    }
+                    return .none
+
                 case .binding(_):
                     return .none
             }
         }
-    }
-}
-
-extension GeoData: Identifiable {
-    public var id: UUID {
-        UUID()
-    }
-
-    var stateValue: String {
-        state ?? ""
     }
 }

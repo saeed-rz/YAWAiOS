@@ -13,4 +13,9 @@ extension DependencyValues {
         get { self[WeatherAPI.self] }
         set { self[WeatherAPI.self] = newValue }
     }
+
+    var userDefaultsManager: UserDefaultsManager {
+        get { self[UserDefaultsManager.self] }
+        set { self[UserDefaultsManager.self] = newValue }
+    }
 }
